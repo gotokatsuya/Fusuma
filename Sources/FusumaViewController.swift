@@ -290,11 +290,9 @@ public class FusumaViewController: UIViewController {
     
     @IBAction func closeButtonPressed(_ sender: UIButton) {
         self.delegate?.fusumaWillClosed()
-        if autoDismiss {
-            self.dismiss(animated: true, completion: {
-                self.delegate?.fusumaClosed()
-            })
-        }
+        self.dismiss(animated: true, completion: {
+            self.delegate?.fusumaClosed()
+        })
     }
     
     @IBAction func libraryButtonPressed(_ sender: UIButton) {
